@@ -40,21 +40,26 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.3.0</version>
-        <configuration>
-            <shadedArtifactAttached>true</shadedArtifactAttached>
-            <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
-        </configuration>
-        <executions>
-            <execution>
-                <phase>package</phase>
-                <goals>
-                    <goal>shade</goal>
-                </goals>
-            </execution>
-        </executions>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>3.3.0</version>
+          <configuration>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
+              <transformers>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                      <mainClass>com.csa.app.NaturalDisasterChart</mainClass>
+                  </transformer>
+              </transformers>
+          </configuration>
+          <executions>
+              <execution>
+                  <phase>package</phase>
+                  <goals>
+                      <goal>shade</goal>
+                  </goals>
+              </execution>
+          </executions>
       </plugin>
     </plugins>
   </build>
