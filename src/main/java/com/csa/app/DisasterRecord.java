@@ -102,4 +102,18 @@ public class DisasterRecord {
       this.admin2Code = admin2Code;
       this.geoLocations = geoLocations;
    }
+
+   @Override
+   public String toString() {
+       return "DisasterRecord{" +
+               "year=" + year +
+               ", country='" + country + '\'' +
+               ", disasterSubgroup='" + disasterSubgroup + '\'' +
+               ", region='" + region + '\'' +
+               ", continent='" + continent + '\'' +
+               ", disasterGroup='" + disasterGroup + '\'' +
+               ", disasterType='" + disasterType + '\'' +
+               ", disasterSubtype='" + disasterSubtype + '\'' +
+               '}';
+   }
 }
