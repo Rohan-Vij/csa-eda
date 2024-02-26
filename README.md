@@ -5,3 +5,4 @@ Run `mvn package` to make the app into a `.jar` file.
 
 To run the CSV-->SQLite DB file, run `java -cp target/csa-eda-1.0-SNAPSHOT-jar-with-dependencies.jar com.csa.app.DisastersCSVToDB`.
 
+To run the graph and UI yourself, run `java -cp target/csa-eda-1.0-SNAPSHOT-jar-with-dependencies.jar com.csa.app.NaturalDisasterChart`.
